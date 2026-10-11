@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kishore Saravanan — Aspiring Java Backend Developer</title>
+<meta name="description" content="Portfolio of Kishore Saravanan, a Computer Science student building toward a career as a Java backend developer. Projects, skills, certificates and resume.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script>
+  // Apply the saved theme before first paint so the page doesn't flash.
+  try {
+    var saved = localStorage.getItem('ks-theme');
+    if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<noscript><style>.preloader{display:none !important;}</style></noscript>
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <p class="preloader-line"><span class="preloader-prompt">$</span> whoami</p>
+    <h1 class="preloader-name" id="preloaderName">&nbsp;</h1>
+    <div class="preloader-bar"><span id="preloaderFill"></span></div>
+  </div>
+</div>
+
+<div class="bubble-field"><canvas id="bubbleCanvas" aria-hidden="true"></canvas></div>
+
+<!-- Tab bar / nav, styled like open editor tabs -->
+<header class="tabbar" id="tabbar">
+  <div class="tabbar-inner">
+    <div class="tabbar-brand">
+      <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+      <span class="brand-path">kishore.dev</span>
+      <span class="pro-badge">PRO</span>
+    </div>
+    <nav class="tabs" id="tabs">
+      <a href="#home" class="tab active" data-tab>Home.java</a>
+      <a href="#about" class="tab" data-tab>About.java</a>
+      <a href="#skills" class="tab" data-tab>Skills.java</a>
+      <a href="#projects" class="tab" data-tab>Projects.java</a>
+      <a href="#education" class="tab" data-tab>Education.java</a>
+      <a href="#credentials" class="tab" data-tab>Credentials.java</a>
+      <a href="#contact" class="tab" data-tab>Contact.java</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">Light</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="code-window" role="img" aria-label="Java class definition describing Kishore Saravanan as an aspiring backend developer">
+        <div class="code-window-bar">
+          <span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span>
+          <span class="code-window-title">KishoreSaravanan.java</span>
+        </div>
+        <pre class="code-body"><code id="typedCode" aria-hidden="true"></code><span class="caret" id="caret">&nbsp;</span></pre>
+        <noscript><pre class="code-body-static">public class KishoreSaravanan implements BackendDeveloper {
+    private String role   = "Aspiring Java Backend Developer";
+    private String base   = "Coimbatore, Tamil Nadu";
+    private double cgpa   = 8.1;
+    private String[] core = {"Java", "OOP", "Java 8+", "DBMS"};
+    private String[] learning = {"Spring Boot", "REST APIs", "Hibernate"};
+
+    public static void main(String[] args) {
+        System.out.println("Building real things, one class at a time.");
+    }
+}</pre></noscript>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">// entry point</p>
+        <h1>Kishore Saravanan</h1>
+        <p class="hero-role">Aspiring Java Backend Developer</p>
+        <p class="hero-desc">Computer Science student in Coimbatore, learning to build backend systems the way I learn everything else: by writing the code, breaking it, and reading the stack trace until it makes sense.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="assets/kishore-saravanan-resume.pdf" class="btn btn-ghost" download>Download resume</a>
+        </div>
+        <div class="status-line">
+          <span class="status-dot"></span>
+          <span><span class="mono-accent">status:</span> open to entry-level Software Engineer roles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <p class="eyebrow">~/about</p>
+      <h2 class="section-title">Why backend</h2>
+      <div class="about-grid">
+        <p class="about-text">
+          I started with console programs in Java, a student record system and an inventory tracker for a jewellery shop, small worlds where every rule had to be written out by hand. That pulled me toward the part of an application nobody sees, where object-oriented design, clean data handling and exception handling decide whether the whole thing holds up.
+          <br><br>
+          My latest project, GasGuard, takes that further: a simulated IoT gas leakage monitor with a real-time dashboard, built around one rule, that a sudden spike must always raise a Warning before it becomes a Risk. I'm now deepening the foundation with Spring Boot, REST APIs and Hibernate, alongside DBMS and computer networks coursework, 260+ LeetCode problems, and two 24-hour hackathons.
+        </p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">8.1<span class="stat-unit">/10</span></span>
+            <span class="stat-label">CGPA, B.E. CSE</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">260<span class="stat-unit">+</span></span>
+            <span class="stat-label">LeetCode problems solved</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Projects built</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2</span>
+            <span class="stat-label">24-hour hackathons</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">~/skills</p>
+      <h2 class="section-title">What I work with</h2>
+      <p class="section-sub">Chips marked <span class="legend-dot"></span> are actively in progress, not yet claimed as strengths.</p>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Language</h3>
+          <div class="chip-row">
+            <span class="chip chip-solid">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="chip-row">
+            <span class="chip chip-learning">Spring Boot</span>
+            <span class="chip chip-learning">REST APIs</span>
+            <span class="chip chip-learning">JPA</span>
+            <span class="chip chip-learning">Hibernate</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Databases</h3>
+          <div class="chip-row">
+            <span class="chip chip-solid">PostgreSQL</span>
+            <span class="chip chip-solid">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Web</h3>
+          <div class="chip-row">
+            <span class="chip chip-solid">HTML</span>
+            <span class="chip chip-solid">CSS</span>
+            <span class="chip chip-learning">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Tools</h3>
+          <div class="chip-row">
+            <span class="chip chip-solid">Git</span>
+            <span class="chip chip-solid">GitHub</span>
+            <span class="chip chip-solid">IntelliJ IDEA</span>
+            <span class="chip chip-solid">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Core CS</h3>
+          <div class="chip-row">
+            <span class="chip chip-solid">OOP</span>
+            <span class="chip chip-solid">Java 8+ Features</span>
+            <span class="chip chip-solid">Exception Handling</span>
+            <span class="chip chip-solid">DBMS</span>
+            <span class="chip chip-basic">Operating Systems (basic)</span>
+            <span class="chip chip-basic">Computer Networks (basic)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">AI</h3>
+          <div class="chip-row">
+            <span class="chip chip-solid">Generative AI</span>
+            <span class="chip chip-solid">Prompt Engineering</span>
+            <span class="chip chip-solid">AI Fluency (Anthropic)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <p class="eyebrow">~/projects</p>
+      <h2 class="section-title">Things I've built</h2>
+
+      <div class="file-list">
+
+        <article class="file-card featured">
+          <div class="featured-grid">
+            <div>
+              <div class="file-card-head">
+                <span class="file-icon">{ }</span>
+                <div>
+                  <h3 class="file-name">GasGuard</h3>
+                  <p class="file-meta">IoT gas leakage monitoring system (simulated)</p>
+                </div>
+              </div>
+              <p class="file-desc">Built after reading about a Bengaluru gas-leak tragedy that claimed 8 lives, where nothing warned people early enough to react.</p>
+              <ul class="file-points">
+                <li>Three alert states: Safe, Warning and Risk</li>
+                <li>Rapid-rise prediction that catches sudden gas spikes and always raises a Warning before Risk, so users get time to react</li>
+                <li>Real-time dashboard on web and mobile with live state indicators, graph visuals and second-by-second event logs</li>
+              </ul>
+              <div class="file-tags">
+                <span class="tag">IoT simulation</span><span class="tag">Real-time dashboard</span><span class="tag">Web + mobile</span>
+              </div>
+            </div>
+            <div class="state-panel" aria-label="GasGuard alert logic">
+              <p class="state-title">// alert logic</p>
+              <div class="state-flow">
+                <span class="state state-safe">Safe</span>
+                <span class="state-arrow">&rsaquo;</span>
+                <span class="state state-warn">Warning</span>
+                <span class="state-arrow">&rsaquo;</span>
+                <span class="state state-risk">Risk</span>
+              </div>
+              <p class="state-note">A sudden spike always passes through Warning first.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="file-card">
+          <div class="file-card-head">
+            <span class="file-icon">{ }</span>
+            <div>
+              <h3 class="file-name">StudentManagementSystem<span class="file-ext">.java</span></h3>
+              <p class="file-meta">Console application</p>
+            </div>
+          </div>
+          <p class="file-desc">A menu-driven application for managing student records end to end: create, read, update and delete.</p>
+          <ul class="file-points">
+            <li>CRUD operations built with OOP and the Java Collections Framework</li>
+            <li>Exception handling to keep bad input from crashing the menu loop</li>
+            <li>Modular class design for reuse and easier maintenance</li>
+          </ul>
+          <div class="file-tags">
+            <span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Collections</span>
+          </div>
+        </article>
+
+        <article class="file-card">
+          <div class="file-card-head">
+            <span class="file-icon">{ }</span>
+            <div>
+              <h3 class="file-name">JewelleryManagementSystem<span class="file-ext">.java</span></h3>
+              <p class="file-meta">Console application</p>
+            </div>
+          </div>
+          <p class="file-desc">An inventory and customer management system for a jewellery shop, run entirely from a console menu.</p>
+          <ul class="file-points">
+            <li>OOP design applied across inventory and customer records</li>
+            <li>Collections Framework and exception handling for reliable data management</li>
+            <li>Modular, menu-driven interface that is easy for a non-developer to use</li>
+          </ul>
+          <div class="file-tags">
+            <span class="tag">Java</span><span class="tag">OOP</span><span class="tag">Exception Handling</span>
+          </div>
+        </article>
+
+      </div>
+      <p class="repo-note">More on <a href="https://github.com/kishoresaravanan511" target="_blank" rel="noopener">github.com/kishoresaravanan511</a></p>
+    </div>
+  </section>
+
+  <!-- EDUCATION / LOG -->
+  <section id="education" class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">~/education --log</p>
+      <h2 class="section-title">Timeline</h2>
+
+      <div class="log">
+        <div class="log-entry">
+          <span class="log-marker"></span>
+          <div class="log-body">
+            <p class="log-date">2024 — 2028</p>
+            <h3 class="log-title">B.E. Computer Science Engineering</h3>
+            <p class="log-sub">Dr. N.G.P. Institute of Technology, Coimbatore · CGPA 8.1/10</p>
+          </div>
+        </div>
+        <div class="log-entry">
+          <span class="log-marker"></span>
+          <div class="log-body">
+            <p class="log-date">2024</p>
+            <h3 class="log-title">Higher Secondary (Class XII)</h3>
+            <p class="log-sub">Kongu Vellalar Matriculation Higher Secondary School, Tirupur · 90%</p>
+          </div>
+        </div>
+        <div class="log-entry">
+          <span class="log-marker"></span>
+          <div class="log-body">
+            <p class="log-date">2022</p>
+            <h3 class="log-title">Secondary School (Class X)</h3>
+            <p class="log-sub">Kongu Vellalar Matriculation Higher Secondary School, Tirupur · 90%</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-block">
+        <h3 class="cert-heading">// achievements &amp; extracurricular</h3>
+        <ul class="cert-list">
+          <li><span class="cert-check">✓</span> Solved 260+ coding problems on LeetCode</li>
+          <li><span class="cert-check">✓</span> Participated in graVITas, a 24-hour hackathon at VIT Vellore</li>
+          <li><span class="cert-check">✓</span> Participated in Codenych, a 24-hour hackathon at Erode Sengunthar Engineering College</li>
+          <li><span class="cert-check">✓</span> Earned two Claude certifications: AI Fluency (Anthropic) and AI Automation with Claude (Coursera)</li>
+          <li><span class="cert-check">✓</span> Active GitHub learner with Java console applications and an IoT simulation project</li>
+          <li><span class="cert-check">✓</span> Continuously learning Java backend development, Spring Boot and AI technologies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS: resume + certificates -->
+  <section id="credentials" class="section">
+    <div class="wrap">
+      <p class="eyebrow">~/credentials</p>
+      <h2 class="section-title">Resume &amp; certificates</h2>
+
+      <div class="resume-card">
+        <div class="resume-card-info">
+          <span class="file-icon">↓</span>
+          <div>
+            <h3 class="file-name">kishore-saravanan-resume<span class="file-ext">.pdf</span></h3>
+            <p class="file-meta">One page · Java backend focus</p>
+          </div>
+        </div>
+        <a href="assets/kishore-saravanan-resume.pdf" class="btn btn-primary" download>Download resume</a>
+      </div>
+
+      <h3 class="cert-heading" style="margin-top:40px;">// certificates on file</h3>
+      <div class="cert-grid">
+
+        <article class="cert-card">
+          <a href="assets/certificates/ai-automation-claude-coursera.pdf" target="_blank" rel="noopener" class="cert-thumb-link">
+            <img src="assets/certificates/ai-automation-thumb.jpg" alt="AI Automation with Claude course certificate from Coursera, awarded to Kishore Saravanan" class="cert-thumb" loading="lazy">
+          </a>
+          <div class="cert-card-body">
+            <h4 class="cert-card-title">AI Automation with Claude</h4>
+            <p class="cert-card-issuer">Coursera, with Anthropic and Advancing Women in Tech · 25 Aug 2026</p>
+            <div class="cert-card-actions">
+              <a href="assets/certificates/ai-automation-claude-coursera.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View</a>
+              <a href="assets/certificates/ai-automation-claude-coursera.pdf" download class="btn btn-ghost btn-sm">Download</a>
+              <a href="https://coursera.org/verify/YX8VDMTNFX3F" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Verify</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cert-card">
+          <a href="assets/certificates/ai-fluency-anthropic.pdf" target="_blank" rel="noopener" class="cert-thumb-link">
+            <img src="assets/certificates/ai-fluency-thumb.jpg" alt="AI Fluency: Framework and Foundations certificate from Anthropic, presented to Kishore Saravanan" class="cert-thumb" loading="lazy">
+          </a>
+          <div class="cert-card-body">
+            <h4 class="cert-card-title">AI Fluency: Framework &amp; Foundations</h4>
+            <p class="cert-card-issuer">Anthropic · 2026</p>
+            <div class="cert-card-actions">
+              <a href="assets/certificates/ai-fluency-anthropic.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View</a>
+              <a href="assets/certificates/ai-fluency-anthropic.pdf" download class="btn btn-ghost btn-sm">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cert-card">
+          <a href="assets/certificates/java-basic-hackerrank.pdf" target="_blank" rel="noopener" class="cert-thumb-link">
+            <img src="assets/certificates/java-basic-thumb.jpg" alt="Java (Basic) certificate from HackerRank, presented to Kishore S" class="cert-thumb" loading="lazy">
+          </a>
+          <div class="cert-card-body">
+            <h4 class="cert-card-title">Java (Basic)</h4>
+            <p class="cert-card-issuer">HackerRank · 13 Dec 2025</p>
+            <div class="cert-card-actions">
+              <a href="assets/certificates/java-basic-hackerrank.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View</a>
+              <a href="assets/certificates/java-basic-hackerrank.pdf" download class="btn btn-ghost btn-sm">Download</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="wrap">
+      <p class="eyebrow">~/contact</p>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="section-sub">Looking for an entry-level Software Engineer role where I can put this foundation to work. Reach out any of these ways.</p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:kishoresaravanan511@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">kishoresaravanan511@gmail.com</span>
+        </a>
+        <a class="contact-card" href="tel:+918056484395">
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+91 80564 84395</span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/kishore-saravanan-java" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">/in/kishore-saravanan-java</span>
+        </a>
+        <a class="contact-card" href="https://github.com/kishoresaravanan511" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">/kishoresaravanan511</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Kishore Saravanan · Coimbatore, Tamil Nadu</span>
+    <span class="footer-build">Built with HTML, CSS &amp; JS · Deployed on Vercel</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
