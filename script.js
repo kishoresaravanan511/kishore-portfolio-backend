@@ -1,19 +1,19 @@
 // ===== Config =====
 const CODE_LINES = [
   { text: 'public class KishoreSaravanan implements ', accent: 'kw' },
-  { text: 'BackendDeveloper', accent: 'type' },
+  { text: 'FullstackDeveloper', accent: 'type' },
   { text: ' {', accent: 'plain' },
 ];
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const SOURCE = [
-  { kw: 'public class ', name: 'KishoreSaravanan', mid: ' implements ', type: 'BackendDeveloper', tail: ' {' },
-  { indent: true, kw: 'private String ', name: 'role', mid: '   = ', str: '"Aspiring Java Backend Developer"', tail: ';' },
+  { kw: 'public class ', name: 'KishoreSaravanan', mid: ' implements ', type: 'FullStackDeveloper', tail: ' {' },
+  { indent: true, kw: 'private String ', name: 'role', mid: '   = ', str: '"Aspiring Java Fullstack Developer"', tail: ';' },
   { indent: true, kw: 'private String ', name: 'base', mid: '   = ', str: '"Coimbatore, Tamil Nadu"', tail: ';' },
   { indent: true, kw: 'private double ', name: 'cgpa', mid: '   = ', num: '8.1', tail: ';' },
   { indent: true, kw: 'private String[] ', name: 'core', mid: ' = ', str: '{"Java", "OOP", "Java 8+", "DBMS"}', tail: ';' },
-  { indent: true, kw: 'private String[] ', name: 'learning', mid: ' = ', str: '{"Spring Boot", "REST APIs", "Hibernate"}', tail: ';' },
+  { indent: true, kw: 'private String[] ', name: 'learning', mid: ' = ', str: '{"Spring","Spring Boot","Spring MVC", "REST APIs","SOAP", "JPA", "Hibernate","Maven"}', tail: ';' },
   { blank: true },
   { indent: true, kw: 'public static void ', name: 'main', mid: '(', type: 'String[] args', tail: ') {' },
   { indent: 2, kw: 'System.out.', name: 'println', mid: '(', str: '"Building real things, one class at a time."', tail: ');' },
